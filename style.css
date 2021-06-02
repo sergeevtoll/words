@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 23px;
+}
+.container{
+  width: 100vw;
+  padding: 0 10px;
+  margin:0 auto;
+  text-align: center;
+}
+button{
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid lightseagreen;
+  border-radius: 8px;
+}
+.next{
+  background: greenyellow;
+}
+.vision{
+  background: yellow;
+}
+
+.word{
+  width: 90%;
+  padding: 20px 0;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid lightseagreen;
+}
+.translate.hide{
+  color: transparent;
+}
