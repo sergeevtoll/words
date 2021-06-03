@@ -2,7 +2,7 @@ window.document.onload = function (e) {
   const btnVision = document.querySelector('.vision')
   console.log('object')
   const btnNext = document.querySelector('.next')
-  const word = document.querySelector('.word')
+  const word = document.querySelector('.current')
   const translate = document.querySelector('.translate')
 
   function shuffle(array) {
