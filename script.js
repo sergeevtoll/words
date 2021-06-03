@@ -103,13 +103,13 @@ window.document.onload = function (e) {
 console.log(shaffleData)
   btnNext.addEventListener('click', () => {
     const words = shaffleData[i]
-    word.innerHTML = words.word
+    translate.innerHTML = words.word
     translate.innerHTML = words.translate
     translate.classList.add('hide')
     i++
   })
   btnVision.addEventListener('click', () => {
-    translate.classList.remove('hide')
+    word.classList.remove('hide')
   })
 
 
