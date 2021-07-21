@@ -202,7 +202,7 @@ btnRus.addEventListener('click',()=>lang='rus')
     translate.classList.remove('hide')
   })
 
-  holdBot.addEventListener('click',()=>holdWords.push(shaffleData[i]))
+  holdBot.addEventListener('click',()=>holdWords.push(shaffleData[i-1]))
   visionHold.addEventListener('click',()=>{
     for(let j=0; j<holdWords.length; j++){
       holdData.innerHTML += `
