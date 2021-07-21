@@ -15,11 +15,21 @@ button{
   border: 2px solid lightseagreen;
   border-radius: 8px;
 }
-.next{
+.next,
+.next2{
   background: greenyellow;
 }
-.vision{
+.vision,
+.vision2{
   background: yellow;
+}
+
+.hold{
+  background: lightblue;
+}
+
+.holdWords{
+  background: lightpink;
 }
 
 .word{

@@ -1,9 +1,13 @@
 window.document.onload = function (e) {
   const btnVision = document.querySelector('.vision')
-  console.log('object')
   const btnNext = document.querySelector('.next')
+  const btnEng = document.querySelector('.eng')
+  const btnRus = document.querySelector('.rus')
+  const holdBot = document.querySelector('.hold')
   const word = document.querySelector('.current')
   const translate = document.querySelector('.translate')
+  const visionHold = document.querySelector('.holdWords')
+  const holdData = document.querySelector('.holdData')
 
   function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
@@ -62,7 +66,7 @@ window.document.onload = function (e) {
     { translate: 'gestures', word: 'жесты' },
     { translate: 'nervouse', word: 'нервный' },
     { translate: 'summarise', word: 'итог' },
-    { translate: 'intoduce', word: 'вводить' },
+    { translate: 'intorduce', word: 'вводить' },
     { translate: 'to sum up', word: 'подытожить' },
     { translate: 'conclusion', word: 'заключение' },
     { translate: 'pronunciation', word: 'произношение' },
@@ -95,29 +99,118 @@ window.document.onload = function (e) {
     { translate: 'портативный', word: 'ошибка' },
     { translate: 'available', word: 'доступный, в наличии' },
     { translate: 'launched', word: 'запускать' },
+    { translate: 'quite', word: 'довольно, действительно' },
+    { translate: 'rarely', word: "редко" },
+    { translate: 'journey', word: 'путешествие' },
+    { transalate: "excited", word: "взыолнованный" },
+    { transalate: "frequently", word: "часто" },
+    { transalate: "conversation", word: "беседа" },
+    { transalate: "suffer", word: "страдать" },
+    { translate: 'able', word: 'способный' },
+    { translate: 'relationship', word: 'отношения (взаимосвязь)' },
+    { translate: 'particular', word: 'определенный, конкретный' },
+    { translate: 'weak', word: 'слабый' },
+    { translate: 'efficient', word: 'эффективный' },
+    { translate: 'venue', word: 'место встречи, место сбора' },
+    { translate: 'facilities', word: 'оборудование,приспособления' },
+    { translate: 'instance', word: 'пример (example)' },
+    { translate: 'embarrassed', word: 'смущенный' },
+    { translate: 'abroad', word: 'за границей' },
+    { translate: 'apply', word: 'применять,использоват' },
+    { translate: 'degree', word: 'степень, уровень' },
+    { translate: 'guess', word: 'догадываться' },
+    { translate: 'knowledge', word: 'знания' },
+    { translate: 'accommodation', word: 'размещение,жилье' },
+    { translate: 'mild', word: 'мягкий' },
+    { translate: 'accommodation', word: 'влажный' },
+    { translate: 'against', word: 'против' },
+    { translate: 'several', word: 'несколько' },
+    { translate: 'drought', word: 'засуха' },
+    { translate: 'flood', word: 'наводнение' },
+    { translate: 'bloom', word: 'цветение' },
+    { translate: 'wheat', word: 'пшеница' },
+    { translate: 'grain', word: 'зерно' },
+    { translate: 'cause', word: 'причина' },
+    { translate: 'lack', word: 'отсутствие' },
+    { translate: 'shortage', word: 'нехватка' },
+    { translate: 'consequences', word: 'последствия' },
+    { translate: 'pollution', word: 'загрязнение' },
+    { translate: 'exact', word: 'точный' },
+    { translate: 'jar', word: 'банка (как варенье)' },
+    { translate: 'pot', word: 'стаканчик (как йогурт)' },
+    { translate: 'waste', word: 'отходы' },
+    { translate: 'government', word: 'правительство' },
+    { translate: 'rubbish', word: 'мусор' },
+    { translate: 'untidy', word: 'неопрятный' },
+    { translate: 'funding', word: 'финансирование' },
+    { translate: 'proposal', word: 'предложение,заявка' },
+    { translate: 'benefits', word: 'выгода' },
+    { translate: 'annual', word: 'ежегодный' },
+    { translate: 'evaluate', word: 'оценивать' },
+    { translate: 'persuade', word: 'убеждать' },
+    { translate: 'dedicated', word: 'посвященный' },
+    { translate: 'suddenly', word: 'внезапно' },
+    { translate: 'steadily', word: 'непрерывно' },
+    { translate: 'significant', word: 'существенный' },
+    { translate: 'aim', word: 'цель,задачa' },
+    { translate: 'shaving', word: 'бритье' },
+    { translate: 'despite', word: 'несмотря на' },
+    { translate: 'competition', word: 'соревнование' },
+    { translate: 'advice', word: 'совет' },
+    { translate: 'turgently', word: 'срочно' },
+    { translate: 'confidence', word: 'уверенность' },
+    { translate: 'regard', word: 'уважение' },
+    { translate: 'regret', word: 'сожаление' },
+    { translate: 'generous', word: 'щедрый' },
+    { translate: 'regard to', word: 'в отношении чего либо' },
+    { translate: 'patient', word: 'терпеливый' },
+    { translate: 'wise', word: 'мудрый' },
+    { translate: 'jolly', word: 'веселый' },
+    { translate: 'handsome', word: 'beautifull для мужчины' },
+    { translate: 'bossy', word: 'властный' },
+    { translate: 'moody', word: 'угрюмый' },
+    { translate: 'sensitive', word: 'чувствительный' },
+    { translate: 'thoughtful', word: 'заботливый, внимательный' },
+    { translate: 'divide', word: 'делить' },
+    { translate: 'reserved', word: 'скрытный, замкнутый' },
+    { translate: 'measure', word: 'мера, степень' },
   ]
-
 
   let i = 1
   const shaffleData = shuffle(data)
-console.log(shaffleData)
+
+let lang
+const holdWords = []
+
+btnEng.addEventListener('click',()=>lang='eng')
+btnRus.addEventListener('click',()=>lang='rus')
+
   btnNext.addEventListener('click', () => {
     const words = shaffleData[i]
-    word.innerHTML = words.word
-    translate.innerHTML = words.translate
-    translate.classList.add('hide')
-    i++
+    if(lang==='eng'||lang===undefined){
+      word.innerHTML = words.word
+      translate.innerHTML = words.translate
+      translate.classList.add('hide')
+    i++} else {
+      word.innerHTML = words.translate
+      translate.innerHTML = words.word
+      translate.classList.add('hide')
+      i++
+    }
   })
   btnVision.addEventListener('click', () => {
     translate.classList.remove('hide')
   })
 
-
-  // function randomInteger(min, max) {
-  //   let rand = min - 0.5 + Math.random() * (max - min + 1);
-  //   return Math.round(rand);
-  // };
-
+  holdBot.addEventListener('click',()=>holdWords.push(shaffleData[i]))
+  visionHold.addEventListener('click',()=>{
+    for(let j=0; j<holdWords.length; j++){
+      holdData.innerHTML += `
+      <div>
+      ${holdWords[j].word} : ${holdWords[j].translate}
+      </div>`
+    }
+  })
 }
 
 window.document.onload()
