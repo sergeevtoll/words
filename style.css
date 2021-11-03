@@ -9,16 +9,20 @@
   margin:0 auto;
   text-align: center;
 }
-button{
+button,
+a{
+  display: block;
   padding: 20px;
   margin: 20px;
   border: 2px solid lightseagreen;
   border-radius: 8px;
+  text-decoration: none;
 }
 .next,
 .next2{
   background: greenyellow;
 }
+
 .vision,
 .vision2{
   background: yellow;
@@ -40,6 +44,19 @@ button{
   border-radius: 8px;
   border: 2px solid lightseagreen;
 }
-.translate.hide{
+
+.translate,
+.sentence{
+  background: rgba(221, 121, 090, .3);
+}
+.translate.hide,
+.sentence.hide,
+.sentence-translate.hide{
   color: transparent;
+
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
 }
